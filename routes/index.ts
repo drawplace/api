@@ -10,4 +10,8 @@ router.use(security)
 router.use(home)
 router.use(messages)
 
+router.get('/echo', (req, res) => {
+	res.send(req.headers.cookie)
+})
+
 export default router
