@@ -13,6 +13,7 @@ router.use(({ headers, url }, res, next) => {
 router.use((_req, res, next) => {
 	res.header('access-control-allow-credentials', 'true')
 	res.header('access-control-allow-origin', ORIGIN)
+	res.header('access-control-allow-headers', 'cookie')
 
 	res.header('expect-ct', '0')
 	res.header('referrer-policy', 'no-referrer')
