@@ -11,7 +11,7 @@ router.use(home)
 router.use(messages)
 
 router.get('/echo', (req, res) => {
-	res.send(req.headers.cookie)
+	res.send(req.headers)
 })
 
 export default router
